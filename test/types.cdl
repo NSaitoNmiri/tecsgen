@@ -1,0 +1,23 @@
+typedef int32_t INT32;
+typedef int32_t ER;
+typedef char_t *string;
+
+typedef struct {
+	int32_t	a;
+} stA;
+
+const INT32  a = 10;
+
+signature sSig {
+  ER func( [in]INT32 a );
+};
+
+celltype tCelltype {
+  attr {
+     INT32  a;
+  };
+};
+
+cell tCelltype aCell {
+  a = 10;
+};

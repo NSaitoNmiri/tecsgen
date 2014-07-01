@@ -1,0 +1,78 @@
+/*
+ *                           +-------------------------------------------+
+ *                           |                                           |
+ * +-----------------+       |      +----------------------------+       |       +------------------+
+ * |                 | sSig0 |eEnt0 |                            |  cCal0| sSig1 |                  |
+ * |   tCell1   cCal0|-------|>-----|>eEnt[0]  tInner     cCal[0]|-------|-------|>eEnt0  tCell2    |
+ * |                 | sSig0 |eEnt1 |                            |  cCal1| sSig1 |                  |
+ * |    cell1   cCal1|-------|>-----|>eEnt[1]   inner     cCal[1]|-------|-------|>eEnt1   cell2    |
+ * |                 |       |      |                            |       |       |                  |
+ * +-----------------+       |      +----------------------------+       |       +------------------+
+ *                           |                 tComp                     |
+ *                           |                  comp                     |
+ *                           +-------------------------------------------+
+ *
+ */
+
+typedef int32 ER;
+
+signature sSig0 {
+   ER func0( [in]int32 a );
+   ER func1( [in]int32 a );
+};
+
+signature sSig1 {
+   ER func0( [in]int32 a );
+   ER func1( [in]int32 a );
+};
+
+celltype tCell1 {
+   call sSig0 cCal0;
+   call sSig0 cCal1;
+};
+
+celltype tCell2 {
+   entry sSig1 eEnt0;
+   entry sSig1 eEnt1;
+
+   attr {
+     int32 a;
+   };
+};
+
+celltype tInner {
+   call  sSig1 cCal[2];
+   entry sSig0 eEnt[2];
+
+   attr {
+     int32 a;
+   };
+};
+
+composite tComp {
+  cell tInner inner {
+    a = 10;
+  };
+
+  eEnt0 = inner.eEnt[0];
+  eEnt1 = inner.eEnt[1];
+
+  cCal0 = cCal[0];
+  cCal1 = cCal[1];
+};
+
+cell tCell2 cell2 {
+  a = 30;
+};
+
+cell tComp comp {
+   cCal0 = cell2.eEnt0;
+   cCal1 = cell2.eEnt1;
+};
+
+cell tCell1 cell1 {
+   cCal0 = comp.eEnt0;
+   cCal1 = comp.eEnt1;
+};
+
+

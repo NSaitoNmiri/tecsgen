@@ -1,0 +1,9 @@
+~/Desktop/MrubyBridgePluginPackage/tecsgen/test/sample/data-normal ~/Desktop/MrubyBridgePluginPackage/tecsgen/test
+##### tecsgen normal-1.idl  #####
+~/Desktop/MrubyBridgePluginPackage/tecsgen/test
+~/Desktop/MrubyBridgePluginPackage/tecsgen/test/sample/data-normal ~/Desktop/MrubyBridgePluginPackage/tecsgen/test
+##### tecsgen normal-2.idl  #####
+~/Desktop/MrubyBridgePluginPackage/tecsgen/test
+~/Desktop/MrubyBridgePluginPackage/tecsgen/test/sample/data-flat ~/Desktop/MrubyBridgePluginPackage/tecsgen/test
+##### tecsgen jsp_flat.sig.CPP sample1_flat.blt.CPP sample1_flat.ct.CPP  #####
+~/Desktop/MrubyBridgePluginPackage/tecsgen/test

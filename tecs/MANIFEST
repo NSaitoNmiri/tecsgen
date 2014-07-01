@@ -1,0 +1,27 @@
+PACKAGE tecsgen
+
+MANIFEST
+rpc/PPAllocator.cdl
+rpc/RPCTask.cdl
+rpc/TDR.cdl
+rpc/rpc.cdl
+rpc/sChannel.cdl
+rpc/sRPCErrorHandler.cdl
+rpc/tDataqueueAdaptor_inline.h
+rpc/tDataqueueOWChannel.cdl
+rpc/tNBOTDR_inline.h
+rpc/tPPAllocator.c
+rpc/tRPCDedicatedTaskMain.c
+rpc/tRPCDedicatedTaskMainWithOpener.c
+rpc/tRPCSharedChannelMan.c
+rpc/tRPCSharedTaskMain.c
+rpc/tRPCSharedTaskMainWithOpener.c
+rpc/tSocketChannel.cdl
+rpc/tSocketClient.c
+rpc/tSocketServer.c
+rpc/tTDR_inline.h
+rpc/tTINETChannel.cdl
+rpc/tTINETClient.c
+rpc/tTINETServer.c
+rpc/tecs_rpc.h
+tecs.h

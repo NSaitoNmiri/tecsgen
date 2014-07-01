@@ -1,0 +1,5 @@
+import_C( "dupl-a.h" );  // dupl-b.h ‚ð include ‚µ‚Ä‚¢‚é
+import_C( "dupl-b.h" );  // typedef int  INT;
+
+typedef int32_t  INT32;
+// typedef int32_t  INT32;
